@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #351431;
+  text-transform: uppercase;
+  color: white;
+}
+.logo {
+  color: rgb(225, 225, 225);
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  z-index: 1;
+}
+
+#internship a {
+  color: #00ffea;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li:hover {
+  color: #fcd0a1;
+  cursor: pointer;
+}
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 27px;
+  height: 3px;
+  background-color: rgb(225, 225, 225);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.heading {
+  display: grid;
+  place-items: center;
+  padding-top: 3rem;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/* Table */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #4158d0, #c850c0);
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+  margin: 3rem auto;
+  position: relative;
+}
+
+table thead th {
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+table thead tr {
+  height: 60px;
+  background: #36304a;
+  color: white;
+}
+table tbody tr {
+  height: 50px;
+}
+tbody tr {
+
+  color: #505050;
+  line-height: 1.2;
+}
+table td {
+  text-align: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 80%;
+  margin: auto;
+}
+label{
+  align-self: left;
+  color: white;
+}
+select{
+  border-radius: 5px;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+input{
+  border-radius: 5px;
+  border:none;
+  outline: none;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+button {
+  align-self: center;
+  margin: 5rem 0;
+  border: none;
+  background-color: #308251;
+  padding: 1rem 5rem;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+ button:hover {
+  background-color: #0d7738;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+/* Footer */
+footer {
+  background-color: #351431;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .intro {
+    flex-direction: column;
+  }
+  .nav-links {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  table {
+    display: block;
+  }
+  table > *,
+  table tr,
+  table td,
+  table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 37px 0;
+  }
+  table tbody tr td {
+    padding-left: 40% !important;
+    margin-bottom: 24px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.2;
+    font-weight: unset;
+    position: absolute;
+    width: 40%;
+    left: 1rem;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Ac. no.";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Name";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "E-Mail";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Balance";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Operation";
+  }
+  
+  tbody tr {
+    font-size: 14px;
+  }
+  
+  .intro {
+    width: 90%;
+  }
+  .wrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: #351431;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+    display: flex;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 456px) {
+  form,table{
+    width: 95%;
+  }
+}
+
+/* Nav Animation */
+.nav-active {
+  transform: translateX(0%);
+}
+
+.burgeranimation .line1 {
+  transform: rotate(-45deg) translate(-5px);
+}
+
+.burgeranimation .line2 {
+  display: none;
+}
+
+.burgeranimation .line3 {
+  transform: rotate(45deg) translate(-5px);
+}
+
+@keyframes navlinkfade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

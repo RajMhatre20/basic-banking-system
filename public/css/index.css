@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation Bar */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #351431;
+  text-transform: uppercase;
+  color: white;
+}
+.logo {
+  color: rgb(225, 225, 225);
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+#internship a {
+  color: #00ffea;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links li:hover {
+  color: #fcd0a1;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 27px;
+  height: 3px;
+  background-color: rgb(225, 225, 225);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Intro */
+.intro {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 1rem auto;
+}
+.intro .intro-text {
+  width: 50%;
+  text-align: center;
+}
+.intro .intro-text h1 {
+  margin-bottom: 1rem;
+}
+.intro .intro-text button {
+  margin-top: 2rem;
+  border: none;
+  background-color: #351431;
+  padding: 1rem 2.2rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+.intro .intro-text button:hover {
+  background-color: transparent;
+  color: #351431;
+  border: 2px solid #351431;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.intro .intro-image {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+}
+
+/* About us */
+.about-us {
+  text-align: center;
+  margin: 1rem 0;
+}
+.about-us p {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+/* Disclaimer */
+.disclaimer {
+  text-align: center;
+  margin: 1rem 0;
+}
+.disclaimer p {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+}
+
+/* Footer */
+footer {
+  background-color: #351431;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1280px) {
+  .intro {
+    flex-direction: column;
+  }
+  .nav-links {
+    width: 50%;
+  }
+  .intro-image {
+    justify-content: center;
+    align-items: center;
+    order: 0;
+    margin: 5rem auto;
+  }
+  .intro .intro-text {
+    width: 80%;
+  }
+  .intro-image img {
+    width: 40vw;
+  }
+  .intro-text {
+    order: 1;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .nav-links {
+    width: 60%;
+  }
+  .intro .intro-image {
+    justify-content: center;
+  }
+  .intro .intro-image img {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 868px) {
+  .intro {
+    width: 90%;
+  }
+  .wrapper {
+    overflow-x: hidden;
+    position: relative;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 10vh;
+    background-color: #351431;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+    display: flex;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .content img {
+    object-fit: cover;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.burgeranimation .line1 {
+  transform: rotate(-45deg) translate(-5px);
+}
+
+.burgeranimation .line2 {
+  display: none;
+}
+
+.burgeranimation .line3 {
+  transform: rotate(45deg) translate(-5px);
+}
+
+@keyframes navlinkfade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
