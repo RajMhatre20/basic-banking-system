@@ -1,4 +1,4 @@
-const api='http://localhost:3000/api/history';
+const api='/api/history';
 const paid=document.getElementById('paid-amount');
 const record = ()=>{
     fetch(api)

@@ -1,5 +1,5 @@
 const tbody=document.querySelector('tbody');
-const api='http://localhost:3000/api/history';
+const api='/api/history';
 const record = ()=>{
     fetch(api)
     .then((response)=>{

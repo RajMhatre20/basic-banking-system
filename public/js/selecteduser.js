@@ -1,6 +1,6 @@
 const tbody=document.querySelector('tbody');
 const select=document.querySelector('select');
-const api='http://localhost:3000/api/details';
+const api='/api/details';
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const customerid = urlParams.get('id')
