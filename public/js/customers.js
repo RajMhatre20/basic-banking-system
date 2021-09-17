@@ -22,14 +22,11 @@ const record = ()=>{
             td=document.createElement('td');
             td.appendChild(button);
             tr.appendChild(td);
-            tbody.appendChild(tr);
-            console.log(tr);
-           
+            tbody.appendChild(tr);           
         }
-        console.log(data);
     })
     .catch(()=>{
-        console.log('failed');
+        console.log('failed to fetch api');
     })
 }
 record();

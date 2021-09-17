@@ -20,13 +20,11 @@ const record = ()=>{
                 tr.appendChild(td);
             }
             tbody.appendChild(tr);
-            console.log(tr);
            
         }
-        console.log(data);
     })
     .catch(()=>{
-        console.log('failed');
+        console.log('failed to fetch api');
     })
 }
 record();

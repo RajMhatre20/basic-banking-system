@@ -28,6 +28,7 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 40%;
+  z-index: 2;
 }
 
 #internship a {
@@ -180,19 +181,19 @@ footer {
     left: 1rem;
   }
   table tbody tr td:nth-child(1):before {
-    content: "Ac. no.";
+    content: "Sr. no.";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Name";
+    content: "Sender";
   }
   table tbody tr td:nth-child(3):before {
-    content: "E-Mail";
+    content: "Reciever";
   }
   table tbody tr td:nth-child(4):before {
-    content: "Balance";
+    content: "Amount";
   }
   table tbody tr td:nth-child(5):before {
-    content: "Operation";
+    content: "Time";
   }
   
   tbody tr {

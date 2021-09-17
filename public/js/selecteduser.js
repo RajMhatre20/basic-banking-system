@@ -3,7 +3,7 @@ const select=document.querySelector('select');
 const api='/api/details';
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const customerid = urlParams.get('id')
+const customerid = urlParams.get('id');
 const record = ()=>{
     fetch(api)
     .then((response)=>{
@@ -13,17 +13,14 @@ const record = ()=>{
         const tr=document.createElement('tr');
         for (let i = 0; i < data.length; i++) {
             var option=document.createElement('option');
-            for (const key in data[i]) {
-                if (data[i]._id===customerid) {
-                    
+            if (data[i]._id===customerid) {
+                for (const key in data[i]) {
                     if (key==='_id') {
                         continue;
                     }
                     var td=document.createElement('td');
                     td.innerText=data[i][key];
                     tr.appendChild(td);
-                }
-                else{
                 }
             }
             if (data[i]._id!=customerid) {
@@ -35,9 +32,10 @@ const record = ()=>{
         tbody.appendChild(tr);
     })
     .catch(()=>{
-        console.log('failed');
+        console.log('failed to fetch api');
     })
 }
+record();
 
 document.getElementById('transferid').value=customerid;
 
@@ -56,5 +54,3 @@ function checkform() {
     }
     document.transferdetails.submit();
 }
-
-record();

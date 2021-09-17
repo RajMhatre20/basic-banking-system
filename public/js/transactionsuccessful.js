@@ -10,7 +10,7 @@ const record = ()=>{
         paid.innerText=amount;
     })
     .catch(()=>{
-        console.log('failed');
+        console.log('failed to fetch api');
     })}
 
 record();
