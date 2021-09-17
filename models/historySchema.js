@@ -1,4 +1,4 @@
-let moment=require('moment');
+var moment = require('moment-timezone');
 const mongoose = require('mongoose');
 
 const historySchema = mongoose.Schema({
@@ -16,7 +16,7 @@ const historySchema = mongoose.Schema({
     },
     date:{
         type: String,
-        default: moment().format('MMMM Do YYYY, h:mm:ss a')
+        default: moment().tz("Asia/Kolkata").format('MMMM Do YYYY, h:mm:ss a')
     }
 });
 
