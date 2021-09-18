@@ -52,5 +52,9 @@ function checkform() {
         alert("Enter valid amount");
         return false;
     }
+    if (document.transferdetails.amount.value > document.querySelectorAll('td')[3].innerText) {
+        alert('Amount cannot be greater than balance')
+        return false;
+    }
     document.transferdetails.submit();
 }
